@@ -15,7 +15,7 @@
     "server": "npm run dev -w @game/server",
     "mobile": "npm run start -w @game/mobile",
     "web": "npm run web -w @game/mobile",
-    "art:gen": "node scripts/gen-art.mjs",
-    "audio:gen": "node scripts/gen-audio.mjs"
+    "art:gen": "node --env-file-if-exists=.env scripts/gen-art.mjs",
+    "audio:gen": "node --env-file-if-exists=.env scripts/gen-audio.mjs"
   }
 }
