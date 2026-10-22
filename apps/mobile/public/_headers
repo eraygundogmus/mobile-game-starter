@@ -1,0 +1,5 @@
+# Hashed bundles never change: cache them for a year. index.html is not cached.
+/_expo/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

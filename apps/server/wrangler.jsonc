@@ -1,0 +1,25 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  // The game API: daily seed, run verification by replay, leaderboard.
+  // First deploy: `npx wrangler d1 create game` and paste the id below. Then `npm run deploy -w @game/server`.
+  "name": "game-api",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  // Custom domain, when you have one:
+  // "routes": [{ "pattern": "api.example.com", "custom_domain": true }],
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "game",
+      // Placeholder. Local dev and tests do not need a real id.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Origins that may call the API from a browser, comma separated. "*" allows every origin.
+  "vars": { "WEB_ORIGINS": "*" },
+  "dev": { "port": 8787, "ip": "0.0.0.0" }
+}

@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Dodge Starter",
+    "slug": "mobile-game-starter",
+    "version": "1.0.0",
+    "scheme": "dodgestarter",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0E1116",
+    "ios": {
+      "bundleIdentifier": "com.example.dodgestarter",
+      "supportsTablet": true,
+      "config": { "usesNonExemptEncryption": false }
+    },
+    "android": {
+      "package": "com.example.dodgestarter"
+    },
+    "web": {
+      "output": "single",
+      "name": "Dodge Starter",
+      "themeColor": "#0E1116",
+      "backgroundColor": "#0E1116"
+    },
+    "plugins": ["expo-router", "expo-localization"],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

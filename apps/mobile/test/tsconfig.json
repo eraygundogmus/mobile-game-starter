@@ -1,0 +1,23 @@
+{
+  // The expo base inlined, with the app paths (see vitest.config.ts).
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ESNext"],
+    "module": "preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "strict": true,
+    "types": ["node"],
+    "paths": {
+      "@/*": ["../src/*"],
+      "@game/engine": ["../../../packages/engine/src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

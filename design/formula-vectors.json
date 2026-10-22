@@ -1,0 +1,27 @@
+{
+  "note": "Test vectors for design/formula-sheet.md, computed by hand from the canon numbers. packages/engine/test/formulas.test.ts reads this file.",
+  "spawnInterval": [
+    { "tick": 0, "expected": 40 },
+    { "tick": 89, "expected": 40 },
+    { "tick": 90, "expected": 39 },
+    { "tick": 900, "expected": 30 },
+    { "tick": 2520, "expected": 12 },
+    { "tick": 3599, "expected": 12 }
+  ],
+  "fallSpeed": [
+    { "tick": 0, "expected": 3 },
+    { "tick": 599, "expected": 3 },
+    { "tick": 600, "expected": 4 },
+    { "tick": 1800, "expected": 6 },
+    { "tick": 3000, "expected": 8 },
+    { "tick": 3599, "expected": 8 }
+  ],
+  "moveToward": [
+    { "x": 180, "target": 180, "expected": 180 },
+    { "x": 180, "target": 300, "expected": 190 },
+    { "x": 180, "target": 100, "expected": 170 },
+    { "x": 180, "target": 185, "expected": 185 },
+    { "x": 30, "target": 0, "expected": 24 },
+    { "x": 330, "target": 360, "expected": 336 }
+  ]
+}

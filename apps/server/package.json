@@ -1,0 +1,25 @@
+{
+  "name": "@game/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "wrangler d1 migrations apply DB --local",
+    "dev": "wrangler dev",
+    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy",
+    "types": "wrangler types --include-env=false worker-configuration.d.ts",
+    "test": "vitest run --configLoader runner",
+    "typecheck": "npm run types --silent && tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
+    "pretest": "npm run types --silent"
+  },
+  "dependencies": {
+    "@game/engine": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.4.6",
+    "@types/node": "^24.0.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.151.1"
+  }
+}

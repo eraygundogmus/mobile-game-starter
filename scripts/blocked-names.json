@@ -1,0 +1,4 @@
+{
+  "note": "Hashes of terms that must not appear in this repo (names of other games, brands, characters). Add one with: node scripts/check-names.mjs --hash \"Term\"",
+  "terms": []
+}

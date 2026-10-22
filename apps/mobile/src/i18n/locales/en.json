@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Dodge",
+    "tagline": "Slide. Dodge. Beat today's board.",
+    "name": "Your name",
+    "best": "Best today: {{score}}",
+    "play": "Play today's run",
+    "board": "Leaderboard"
+  },
+  "play": {
+    "start": "Drag anywhere to move.\nTap to start.",
+    "score": "Score {{score}}",
+    "lives": "Lives {{lives}}"
+  },
+  "result": {
+    "title": "Run over",
+    "score": "Score: {{score}}",
+    "sending": "Sending the run…",
+    "rank": "Rank {{rank}} today",
+    "offline": "Offline. This run is not on the leaderboard.",
+    "retry": "Play again",
+    "home": "Home"
+  },
+  "board": {
+    "title": "Today's leaderboard",
+    "empty": "No runs yet. Be the first.",
+    "error": "The leaderboard did not load.",
+    "back": "Back"
+  }
+}

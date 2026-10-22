@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  // The web build of the game (Expo web export in dist/) on Cloudflare static assets.
+  // Deploy: npm run web:deploy -w @game/mobile
+  "name": "game-web",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+  // Custom domain, when you have one:
+  // "routes": [{ "pattern": "example.com", "custom_domain": true }]
+}

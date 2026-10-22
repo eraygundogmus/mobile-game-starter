@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "notes": "Source for scripts/gen-audio.mjs (ElevenLabs). Write design/sound-design.md first. Every entry names its trigger, so the code wiring is clear. Audio is never the only signal: every sound has a visual twin.",
+  "sfx": [
+    {
+      "id": "ui_tap",
+      "trigger": "Any button press.",
+      "prompt": "Very short soft click of a small plastic switch, dry, close, clean, no music, no voice",
+      "seconds": 0.5
+    },
+    {
+      "id": "dodge",
+      "trigger": "SimEvent 'dodge': a block leaves the arena.",
+      "prompt": "Tiny bright airy whoosh with a soft rising chime at the end, clean, short, no music, no voice",
+      "seconds": 0.6
+    },
+    {
+      "id": "hit",
+      "trigger": "SimEvent 'hit': a block hits the player.",
+      "prompt": "Short muffled thump with a low electronic buzz, not harsh, clearly negative, no music, no voice",
+      "seconds": 0.7
+    },
+    {
+      "id": "run_over",
+      "trigger": "SimEvent 'end'.",
+      "prompt": "Short descending three-note synth phrase, soft and calm, game over sting, no voice",
+      "seconds": 1.5
+    }
+  ],
+  "music": [
+    {
+      "id": "music_run",
+      "trigger": "The play screen while a run is active.",
+      "prompt": "Minimal synthwave loop for a focused arcade game: steady pulsing bass, light arpeggio, soft pads, 110 BPM, A minor, instrumental, no lyrics, seamless loop, no intro, no ending, no fade-out, constant intensity",
+      "seconds": 60,
+      "loop": true
+    }
+  ]
+}

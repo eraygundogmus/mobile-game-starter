@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Dodge",
+    "tagline": "Kay. Kaç. Günün tablosunu geç.",
+    "name": "Adın",
+    "best": "Bugünkü en iyi: {{score}}",
+    "play": "Günün turunu oyna",
+    "board": "Sıralama"
+  },
+  "play": {
+    "start": "Hareket için sürükle.\nBaşlamak için dokun.",
+    "score": "Skor {{score}}",
+    "lives": "Can {{lives}}"
+  },
+  "result": {
+    "title": "Tur bitti",
+    "score": "Skor: {{score}}",
+    "sending": "Tur gönderiliyor…",
+    "rank": "Bugün {{rank}}. sıradasın",
+    "offline": "Çevrimdışı. Bu tur sıralamaya girmedi.",
+    "retry": "Tekrar oyna",
+    "home": "Ana sayfa"
+  },
+  "board": {
+    "title": "Bugünün sıralaması",
+    "empty": "Henüz tur yok. İlk sen ol.",
+    "error": "Sıralama yüklenmedi.",
+    "back": "Geri"
+  }
+}

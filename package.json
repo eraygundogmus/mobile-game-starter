@@ -1,0 +1,21 @@
+{
+  "name": "mobile-game-starter",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "sim": "npm run sim -w @game/engine",
+    "names": "node scripts/check-names.mjs",
+    "gate": "npm run typecheck && npm test && npm run sim && npm run names",
+    "server": "npm run dev -w @game/server",
+    "mobile": "npm run start -w @game/mobile",
+    "web": "npm run web -w @game/mobile",
+    "art:gen": "node scripts/gen-art.mjs",
+    "audio:gen": "node scripts/gen-audio.mjs"
+  }
+}

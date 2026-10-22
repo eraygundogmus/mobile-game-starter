@@ -1,0 +1,22 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Typecheck (all workspaces)
+        run: npm run typecheck
+      - name: Tests (engine, server in workerd, app logic)
+        run: npm test
+      - name: Balance sim gates
+        run: npm run sim
+      - name: Name check
+        run: npm run names

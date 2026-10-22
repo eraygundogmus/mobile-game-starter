@@ -1,0 +1,14 @@
+concept	en	tr	note
+run	run	tur	One play from the first tick to the end. Max 60 s.
+daily run	daily run	günün turu	Every player gets the same seed on the same UTC day.
+tick	tick	tik	One engine step. 60 per second.
+arena	arena	arena	The 360 × 640 logical play area.
+player	player	oyuncu	The capsule the user moves.
+block	block	blok	A falling obstacle.
+dodge	dodge	kaçış	A block leaves the arena without a hit. +1 score.
+hit	hit	darbe	A block overlaps the player. −1 life.
+lives	lives	can	Hits the player can take. Starts at 3.
+score	score	skor	Number of dodges in a run.
+input log	input log	girdi kaydı	One target x per tick, sent to the server.
+replay	replay	tekrar oynatma	The server runs the input log with the same engine.
+leaderboard	leaderboard	sıralama	Top runs of a day, from server replays only.

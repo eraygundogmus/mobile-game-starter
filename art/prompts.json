@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "model": "gpt_image_2_5",
+  "quality": "medium",
+  "resolution": "1k",
+  "notes": "Source for scripts/gen-art.mjs. Every prompt = stylePrefix + asset prompt + constraints. Write design/art-direction.md first, then copy its style lock into stylePrefix. Generate the anchor first; the other assets use it as a reference so they keep one style. Masters go to art/masters (git-ignored); copy the approved ones into apps/mobile/assets.",
+  "stylePrefix": "Style: clean flat vector shapes with a soft inner glow, for a minimal portrait-mode mobile arcade game. Dark navy background family (#0E1116, #161B22). One cyan key color #4CC9F0 for the player, one magenta #F72585 for danger, one warm accent #FFD166 for rewards. Rounded corners, no outlines, gentle shading. Readable at 48 px.",
+  "constraints": "Constraints: no text, no letters, no numbers, no logo, no signature, no watermark, no frame or border. No likeness of a real person, a known character or the art of another game. Not photorealistic, not a 3D render.",
+  "assets": [
+    {
+      "id": "style-anchor",
+      "group": "anchor",
+      "master": "art/masters/anchor/style-anchor.png",
+      "aspect": "1:1",
+      "quality": "high",
+      "prompt": "Style anchor sheet. A cyan rounded capsule paddle in the lower third. Three magenta rounded blocks of different widths falling above it. A dark navy field. Even spacing, centered composition."
+    },
+    {
+      "id": "player",
+      "group": "sprite",
+      "master": "art/masters/sprite/player.png",
+      "aspect": "3:2",
+      "background": "transparent",
+      "references": ["art/masters/anchor/style-anchor.png"],
+      "prompt": "Single sprite: the cyan rounded capsule paddle from the reference, seen from the front, centered, with a soft cyan glow. Nothing else in the image."
+    },
+    {
+      "id": "block",
+      "group": "sprite",
+      "master": "art/masters/sprite/block.png",
+      "aspect": "3:2",
+      "background": "transparent",
+      "references": ["art/masters/anchor/style-anchor.png"],
+      "prompt": "Single sprite: one magenta rounded block from the reference, centered, with a faint magenta glow. Nothing else in the image."
+    },
+    {
+      "id": "arena",
+      "group": "backdrop",
+      "master": "art/masters/backdrop/arena.png",
+      "aspect": "9:16",
+      "references": ["art/masters/anchor/style-anchor.png"],
+      "prompt": "Empty arena backdrop for a portrait phone screen. Dark navy gradient with a very subtle grid and a soft vignette. Calm and low contrast, so sprites stay readable on top."
+    },
+    {
+      "id": "icon",
+      "group": "brand",
+      "master": "art/masters/brand/icon.png",
+      "aspect": "1:1",
+      "quality": "high",
+      "background": "opaque",
+      "references": ["art/masters/anchor/style-anchor.png"],
+      "prompt": "App icon. A cyan capsule paddle dodging one magenta block that falls past it, on a dark navy square. Bold and simple, readable at 60 px. Fill the whole square, no rounded mask."
+    }
+  ]
+}
